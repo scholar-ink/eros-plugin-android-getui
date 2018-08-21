@@ -85,7 +85,7 @@ public class PushManager extends Manager {
 
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(context)
                 .setSmallIcon(iconId).setContentTitle(appName).setTicker(bean.aps.alert)
-                .setContentText(bean.aps.alert.trim
+                .setContentText(bean.aps.body.trim
                         ()).setAutoCancel(true).setDefaults(Notification.DEFAULT_LIGHTS |
                         Notification.DEFAULT_VIBRATE);
         Intent resultIntent = new Intent(context, ResultActivity.class);

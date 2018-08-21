@@ -13,6 +13,7 @@ public class NotificationBean implements Serializable {
 
     public static class Aps implements Serializable {
         public String alert;
+        public String body;
 
     }
 }
