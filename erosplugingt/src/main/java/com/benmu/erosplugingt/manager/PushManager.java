@@ -84,7 +84,7 @@ public class PushManager extends Manager {
                 ".wx", "app_name"));
 
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(context)
-                .setSmallIcon(iconId).setContentTitle(appName).setTicker(bean.aps.alert)
+                .setSmallIcon(iconId).setContentTitle(bean.aps.alert).setTicker(appName)
                 .setContentText(bean.aps.body.trim
                         ()).setAutoCancel(true).setDefaults(Notification.DEFAULT_LIGHTS |
                         Notification.DEFAULT_VIBRATE);
