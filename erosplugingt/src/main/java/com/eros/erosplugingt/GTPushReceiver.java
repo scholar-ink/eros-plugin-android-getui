@@ -1,4 +1,4 @@
-package com.eros.erosplugingt;
+package com.benmu.erosplugingt;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

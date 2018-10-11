@@ -1,4 +1,4 @@
-package com.eros.erosplugingt.manager;
+package com.benmu.erosplugingt.manager;
 
 import android.app.Activity;
 import android.app.Notification;
