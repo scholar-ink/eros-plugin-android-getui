@@ -9,10 +9,13 @@ import android.util.Log;
 
 import com.alibaba.fastjson.JSONObject;
 import com.eros.erosplugingt.manager.PushManager;
+import com.eros.framework.extend.module.EventModule;
 import com.eros.framework.manager.ManagerFactory;
 import com.eros.framework.manager.impl.ParseManager;
 import com.eros.framework.utils.SharePreferenceUtil;
 import com.igexin.sdk.PushConsts;
+
+import java.util.HashMap;
 
 /**
  * Created by Carry on 2017/11/15.
@@ -53,6 +56,9 @@ public class GTPushReceiver extends BroadcastReceiver {
                 //保存cid
                 if (!TextUtils.isEmpty(mCid)) {
                     SharePreferenceUtil.setClientId(context, mCid);
+                    HashMap<String, Object> hashMap = new HashMap();
+                    hashMap.put("clientId", mCid);
+                    new EventModule().emit("getCid",hashMap);
                 }
                 break;
             default:
