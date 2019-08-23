@@ -35,13 +35,13 @@ public class GTPushReceiver extends BroadcastReceiver {
                     content = new String(payloads, "UTF-8");
                     Log.e("GPush", "payload>>>>>>>>" + content);
                     if (!TextUtils.isEmpty(content)) {
-                        ParseManager parseManager = ManagerFactory.getManagerService
-                                (ParseManager.class);
-                        JSONObject payload = parseManager.parseObject(content);
-                        if (payload != null) {
-                            String data = payload.getString("payload");
+//                        ParseManager parseManager = ManagerFactory.getManagerService
+//                                (ParseManager.class);
+//                        JSONObject payload = parseManager.parseObject(content);
+//                        if (payload != null) {
+//                            String data = payload.getString("payload");
                             ManagerFactory.getManagerService(PushManager.class).handlePush
-                                    (context, data);
+                                    (context, content);
                         }
                     }
                 } catch (Exception e) {
